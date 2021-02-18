@@ -1,0 +1,42 @@
+{
+    "cams": [
+      {
+        "Save": true,
+        "description": "pointgrey_13250269",
+        "driver": "PointGrey",
+        "frameRate": 60,
+        "gain": 1,
+        "exposure": 5000,
+        "gamma": 2.3,
+        "pxformat": "Mono8",
+        "id": 0,
+        "serial": 13250269,
+        "name": "pointgrey_13250269",
+        "hwaccel": "nvidia",
+        "recorder": "ffmpeg",
+        "compress": 20
+      },
+      {
+        "Save": true,
+        "description": "pointgrey_14137700",
+        "driver": "PointGrey",
+        "frameRate": 60,
+        "gain": 1,
+        "exposure": 5000,
+        "gamma": 2.3,
+        "pxformat": "Mono8",
+        "id": 0,
+        "serial": 14137700,
+        "name": "pointgrey_14137700",
+        "hwaccel": "nvidia",
+        "recorder": "ffmpeg",
+        "compress": 20
+      }
+    ],
+    "recorder_frames_per_file": 0,
+    "recorder_path": "C:\\data",
+    "recorder_path_format": "{filename}_{dataname}_{nfiles}",
+    "recorder_sleep_time": 0.05,
+    "server": "udp",
+    "server_port": 9999
+  }
