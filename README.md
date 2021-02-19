@@ -46,7 +46,7 @@ python setup.py develop
 ```
 6. Follow the [camera specific installation](./camera_instructions.md) and instructions for syncronization. Each camera must have a section in the `~/labcams/default.json` file that is created the first time you try to run the software with the command `labcams` from the terminal. Use a text editor to add the correct options -- for this tutorial you should be able to work off of `examples/pointgrey_wolf.json`.
 
-**Make 
+**Make sure you update the config! See the example near the bottom of this tutorial**
 
 Then run `labcams` from the command terminal.
 
@@ -86,6 +86,7 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
  * `recorder_path` the path of the recorder.
 
 **Example Config** as found in `examples/pointgrey_wolf.json`.
+
 ```json
 {
     "cams": [
@@ -144,7 +145,25 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
 
 Make sure you pay close attention to
 
-`FFMPEGWriter(GenericWriterProcess)` as defined in `io.py`. It holds all of the encoding options and ffmpeg commands and is likely where any throughput issues will emerge from. Also note the default compression(cq:v 25) and only uses a single thread). 
+`FFMPEGWriter(GenericWriterProcess)` as defined in `io.py`. It holds all of the encoding options and ffmpeg commands and is likely where any throughput issues will emerge from. Also note the default compression(cq:v 25) and only uses a single thread). Check out ffmpeg options for tweaking more things as needed!
+
+<details><summary>Specific code of interest</summary>
+<p>
+
+```python
+            elif hwaccel == 'nvidia':
+                if self.compression == 0:
+                    display('Using compression 25 for the NVIDIA encoder')
+                    self.compression = 25
+                self.doutputs = {'-vcodec':'h264_nvenc',
+                                 '-pix_fmt':'yuv420p',
+                                 '-cq:v':str(self.compression),
+                                 '-threads':str(1),
+                                 '-preset':'slow'}
+```
+
+</p>
+</details>
 
 
 # Credit
