@@ -465,7 +465,7 @@ class FFMPEGWriter(GenericWriterProcess):
                                  '-pix_fmt':'yuv420p',
                                  '-cq:v':str(self.compression),
                                  '-threads':str(1),
-                                 '-preset':'medium'}
+                                 '-preset':'slow'}
         self.hwaccel = hwaccel
         
     def close_file(self):
