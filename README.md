@@ -102,7 +102,9 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
         "id": 0,
         "serial": 13250269,
         "name": "pointgrey_13250269",
-        "recorder": "binary"
+        "hwaccel": "nvidia",
+        "recorder": "ffmpeg",
+        "compress": 25
       },
       {
         "Save": true,
@@ -116,7 +118,9 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
         "id": 1,
         "serial": 14137700,
         "name": "pointgrey_14137700",
-        "recorder": "binary"
+        "hwaccel": "nvidia",
+        "recorder": "ffmpeg",
+        "compress": 25
       },
      {
         "Save": true,
@@ -130,7 +134,9 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
         "id": 2,
         "serial": 14137697,
         "name": "pointgrey_14137697",
-        "recorder": "binary"
+        "hwaccel": "nvidia",
+        "recorder": "ffmpeg",
+        "compress": 25
       }
     ],
     "recorder_frames_per_file": 0,
