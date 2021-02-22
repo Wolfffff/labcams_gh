@@ -89,6 +89,7 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
 
 ```json
 {
+{
     "cams": [
       {
         "Save": true,
@@ -97,7 +98,6 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
         "frameRate": 90,
         "gain": 1,
         "exposure": 5000,
-        "gamma": 2.3,
         "pxformat": "Mono8",
         "id": 0,
         "serial": 13250269,
@@ -113,7 +113,6 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
         "frameRate": 90,
         "gain": 1,
         "exposure": 5000,
-        "gamma": 2.3,
         "pxformat": "Mono8",
         "id": 1,
         "serial": 14137700,
@@ -129,7 +128,6 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
         "frameRate": 90,
         "gain": 1,
         "exposure": 5000,
-        "gamma": 2.3,
         "pxformat": "Mono8",
         "id": 2,
         "serial": 14137697,

@@ -362,6 +362,7 @@ Available serials are:
             if not PySpin.IsWritable(genable):
                 cprocess = PySpin.CBooleanPtr(
                     self.nodemap.GetNode("OnBoardColorProcessEnabled"))
+                    # Note that setting this slows max framerate in some instances.
                 cprocess.SetValue(True)
             if PySpin.IsWritable(genable):
                 genable.SetValue(True)
@@ -445,7 +446,7 @@ Available serials are:
         self.camera_ready.set()
         self.prev_ts = 0
         self.lasttime = time.time()
-        
+
     def _cam_startacquisition(self):
         node_acquisition_mode = PySpin.CEnumerationPtr(
             self.nodemap.GetNode('AcquisitionMode'))
@@ -488,7 +489,7 @@ Available serials are:
                 self.cam.TriggerSelector.SetValue(1) # this is exposure active in CM3
                 self.cam.TriggerMode.SetValue(PySpin.TriggerMode_On)
                 self.cam.TriggerOverlap.SetValue(PySpin.TriggerOverlap_ReadOut)
-                display('PointGrey [{0}] - External trigger mode ON .'.format(self.cam_id))    
+                display('PointGrey [{0}] - External trigger mode ON .'.format(self.cam_id)) 
             if 'out_line' in self.hardware_trigger:
                 display('This is a master camera, sleeping .5 sec.')
                 time.sleep(0.2)                
