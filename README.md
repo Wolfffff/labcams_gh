@@ -89,13 +89,12 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
 
 ```json
 {
-{
     "cams": [
       {
         "Save": true,
         "description": "pointgrey_13250269",
         "driver": "PointGrey",
-        "frameRate": 90,
+        "frameRate": 100,
         "gain": 1,
         "exposure": 5000,
         "pxformat": "Mono8",
@@ -110,7 +109,7 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
         "Save": true,
         "description": "pointgrey_14137700",
         "driver": "PointGrey",
-        "frameRate": 90,
+        "frameRate": 100,
         "gain": 1,
         "exposure": 5000,
         "pxformat": "Mono8",
@@ -125,7 +124,7 @@ We also want to set serial numbers, gain, exposure, etc in the config to make su
         "Save": true,
         "description": "pointgrey_14137697",
         "driver": "PointGrey",
-        "frameRate": 90,
+        "frameRate": 100,
         "gain": 1,
         "exposure": 5000,
         "pxformat": "Mono8",
